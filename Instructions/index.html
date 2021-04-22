@@ -7,63 +7,70 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Belly Button Biodiversity Dashboard</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="icon" href="static/img/bacteria.svg">
-  <link rel="stylesheet" href="style.css">
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Bellybutton Biodiversity</title>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Google fonts CSS-->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+    <!-- custom CSS-->
+    <link href="static/css/style.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <div class="container">
-    <!-- Jumbotron -->
-    <div class="row">
-      <div class="col-md-12 jumbotron">
-    
-        <h1 class="h1">Belly Button Biodiversity Dashboard</h1>
-      </div>
-    </div>
-    <!-- Dashboard -->
-    <div class="row">
-      <h2 class="title display-5">Dashboard</h2>
-      <hr>
-      <!-- Menu and Demographics -->
-      <div class="col-md-2 dashboardrow1">
-        <div class="well menustyle">
-          <h6 class="menutitle">Test Subject ID</h6>
-          <select id="selDataset" onchange="optionChanged(this.value)" class="dropdown"></select>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 jumbotron text-center jumbo-bg">
+                <h1 class="header-font text-dark">Belly Button Biodiversity Dashboard</h1>
+                <h6 class="text-dark"><strong>Use the interactive charts below to explore the dataset</strong></h6>
+            </div>
         </div>
-        <div class="panel panel-primary panelstyle">
-          <div class="panel-heading">
-            <h5 class="panel-title">Demographic Info</h5>
-          </div>
-          <div id="sample-metadata" class="panel-body"></div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="card mb-4">
+                    <div class="card-header belly-bg text-light text-center header-font">Test Subject ID</div>
+                    <div class="card-body p-2 text-center bg-light">
+                        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header belly-bg text-light text-center header-font">Demographic Info</div>
+                    <div class="card-body p-2 bg-light" id="sample-metadata">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div id="bar"></div>
+            </div>
+            <div class="col-md-5">
+                <div id="gauge"></div>
+            </div>
         </div>
-      </div>
-      <!-- Bubble Chart -->
-      <div class="col-md-10 dashboardrow1">
-        <div id="bubble" class="chartbox"></div>
-      </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="bubble"></div>
+            </div>
+        </div>
     </div>
-    <div class="row">
-      <!-- Bar Chart -->
-      <div class="col-md-7 dashboardrow2">
-        <div id="bar" class="chartbox"></div>
-      </div>
-      <!-- Gauge -->
-      <div class="col-md-5 dashboardrow2">
-        <br>
-        <div id="gauge" class="gaugebox"></div>
-      </div>
-    </div>
-  </div>
-  <!-- Footer -->
-  <footer class="footerstyle">Q. Nevels Copyright &copy; 2020 <a class="footcolor"> </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="static/js/app.js"></script>
-  <!-- <script src="./static/js/bonus.js"></script> -->
-  <!-- <script src="samples.json"></script> -->
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="static/js/app.js"></script>
 
 </body>
 
