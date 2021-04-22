@@ -1,68 +1,189 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Top */
+  .jumbotron {
+    margin-top: 10px;
+    min-height: 300px;
+    background-image: url(static/img/grf-bg.jpg);
+    background-size: cover;
+    background-color: #337ab7;
+    padding-top:0;
+    text-align: left;
+    color: white;
+    box-shadow: 0 8px 16px -6px rgb(255, 255, 255);
+  }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  .jumbotron>.h1 {
+    margin-top: 120px;
+    font-family: Arial;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 540;
+    line-height: 1.2;
+  }
+  /* About */
+  .about {
+    font-size: 18px;
+    font-family: Arial;
+    color: rgb(0, 0, 0);
+    line-height: 1.7;
+    text-align: justify;
+    text-justify: inter-word;
+    padding-right: 30px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    
 
-    <title>Bellybutton Biodiversity</title>
-    <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  }
 
-    <!-- Google fonts CSS-->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  .link {
+    font-size: 18px;
+    font-family: Arial;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    line-height: 1.7;
+  }
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    background-image:url(static/img/bacteria.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    line-height: 1.42857143;
+    color: rgb(255, 255, 255);
+    
+    
+}
+  
+  .title {
+    font-family: Arial;
+    color: rgb(255, 255, 255);
+    margin-top: 0px;
+    background-color: rgb(0, 0, 0);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    width: 1170px;
+  }
 
-    <!-- custom CSS-->
-    <link href="static/css/style.css" rel="stylesheet">
+  /* About Deshboard */
+  .aboutdeshboard {
+    font-size: 18px;
+    font-family: Arial;
+    color: rgb(0, 0, 0);
+    line-height: 1.7;
+    background-color: rgb(255, 255, 255);
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 0px;
+    padding: 20px;
+    border-radius: 25px;
+  }
 
-</head>
+  /* Menu and Demographics */
+  .menustyle {
+    box-shadow: 0 8px 14px -6px rgb(74, 74, 74);
+    padding: 20px;
+    border-radius: 25px;
+    height: 135px;
+  }
 
-<body>
+  .menutitle {
+    font-family: Arial;
+    font-size: 16px;
+    color: rgb(3, 3, 3);
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 jumbotron text-center jumbo-bg">
-                <h1 class="header-font text-dark">Belly Button Biodiversity Dashboard</h1>
-                <h6 class="text-dark"><strong>Use the interactive charts below to explore the dataset</strong></h6>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <div class="card mb-4">
-                    <div class="card-header belly-bg text-light text-center header-font">Test Subject ID</div>
-                    <div class="card-body p-2 text-center bg-light">
-                        <select id="selDataset" onchange="optionChanged(this.value)"></select>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header belly-bg text-light text-center header-font">Demographic Info</div>
-                    <div class="card-body p-2 bg-light" id="sample-metadata">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5">
-                <div id="bar"></div>
-            </div>
-            <div class="col-md-5">
-                <div id="gauge"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div id="bubble"></div>
-            </div>
-        </div>
-    </div>
+  .dropdown {
+    font-family: Arial;
+    font-size: 16px;
+    color: rgb(80, 80, 80);
+    padding: 5px;
+    margin-left: 28px;
+  }
 
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  .panelstyle {
+    border-color: rgb(206, 206, 206);
+    box-shadow: 0 8px 14px -6px rgb(74, 74, 74);
+    padding: 0px;
+    margin-top: 31px;
+  }
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="static/js/app.js"></script>
+  .panel-primary>.panel-heading {
+    height: 55px;
+    background-color: #337ab7;
+    border-bottom-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px;
+  }
 
-</body>
+  .panel-title {
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    line-height: 1.7;
+    
+  }
 
-</html>
+  .panel-body {
+    font-family: Arial;
+    font-size: 15px;
+    height: 320px;
+    width: 170px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    padding-bottom: 0px;
+    
+  }
+
+  /* Charts */
+  .chartbox {
+    box-shadow: 0 8px 14px -6px rgb(74, 74, 74);
+    padding: 20px;
+    padding-bottom: 25px;
+    border-radius: 25px;
+    
+  }
+
+  .gaugebox {
+    background-color: white;
+    padding: 10px;
+    padding-top: 100px;
+    padding-bottom: 8px;
+    height: 605px;
+
+  }
+
+  /* Dashboard */
+  .dashboardrow1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .dashboardrow2 {
+    margin-top: 10px;
+    margin-bottom: 150px;
+  }
+
+  /* Footer */
+  .footerstyle {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    background: rgb(240, 240, 240);
+    font-size: 15px;
+    color: black;
+    font-family: Arial;
+    text-align: center;
+  }
+
+  .footcolor {
+    color: rgb(133, 133, 133);
+  }
